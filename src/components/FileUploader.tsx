@@ -145,7 +145,7 @@ export const FileUploader: React.FC = () => {
             <input 
               ref={fileInputRef}
               type="file" 
-              accept="image/webp"
+              accept="image/webp,image/jpeg,image/jpg"
               className="hidden" 
               onChange={handleInputChange}
             />
