@@ -61,7 +61,7 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({
         {compareMode && convertedSrc ? (
           <div className="grid grid-cols-2 gap-px bg-gray-200">
             <div className="bg-white p-2">
-              <p className="text-xs text-gray-500 mb-1">Original (WebP)</p>
+              <p className="text-xs text-gray-500 mb-1">Original Image</p>
               <div className="relative pb-[56.25%]">
                 <img 
                   src={originalSrc} 
