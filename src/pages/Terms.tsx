@@ -7,7 +7,7 @@ export const Terms: React.FC = () => {
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms of Service</h1>
         
         <div className="prose prose-blue max-w-none">
-          <p className="text-gray-600 mb-6">Last updated: March 15, 2024</p>
+          <p className="text-gray-600 mb-6">Last updated: May 2, 2025</p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
           <p className="text-gray-600 mb-6">
