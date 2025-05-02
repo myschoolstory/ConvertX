@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Test Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+        .test-step {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .test-step h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .failure {
+            color: red;
+            font-weight: bold;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual Testing Instructions for Image Converter Application</h1>
+    
+    <p>This document provides step-by-step instructions for manually testing the Image Converter application.</p>
+    
+    <h2>Prerequisites</h2>
+    <ul>
+        <li>The application is running at <a href="http://localhost:5177/" target="_blank">http://localhost:5177/</a></li>
+        <li>Test image file is available at <code>/app/test.jpg</code></li>
+    </ul>
+    
+    <h2>Test Cases</h2>
+    
+    <div class="test-step">
+        <h3>Test Case 1: Upload Functionality for JPG/JPEG Files</h3>
+        <ol>
+            <li>Open the application at <a href="http://localhost:5177/" target="_blank">http://localhost:5177/</a></li>
+            <li>Click on the "Choose File" button or the upload area</li>
+            <li>Select the test image file <code>/app/test.jpg</code></li>
+            <li>Verify that the image is displayed in the preview area</li>
+        </ol>
+        <p>Expected Result: The image should be successfully uploaded and displayed in the preview area.</p>
+        <p>Result: <span class="success">PASS</span> / <span class="failure">FAIL</span></p>
+        <p>Notes: </p>
+    </div>
+    
+    <div class="test-step">
+        <h3>Test Case 2: Drag and Drop Functionality for JPG/JPEG Files</h3>
+        <ol>
+            <li>Open the application at <a href="http://localhost:5177/" target="_blank">http://localhost:5177/</a></li>
+            <li>If there's already an image loaded, click the "Clear" button</li>
+            <li>Drag the test image file <code>/app/test.jpg</code> from your file explorer and drop it onto the drop zone</li>
+            <li>Verify that the image is displayed in the preview area</li>
+        </ol>
+        <p>Expected Result: The image should be successfully uploaded via drag and drop and displayed in the preview area.</p>
+        <p>Result: <span class="success">PASS</span> / <span class="failure">FAIL</span></p>
+        <p>Notes: </p>
+    </div>
+    
+    <div class="test-step">
+        <h3>Test Case 3: Conversion Settings (Compression Quality and Lossless Mode)</h3>
+        <ol>
+            <li>Upload the test image using either method from Test Case 1 or 2</li>
+            <li>Locate the quality slider and adjust it to different values (e.g., 50%, 75%, 100%)</li>
+            <li>Toggle the "Lossless" checkbox on and off</li>
+            <li>Click the "Convert" button after each change</li>
+            <li>Verify that the conversion settings affect the output image quality and file size</li>
+        </ol>
+        <p>Expected Result: The conversion settings should affect the output image quality and file size. Higher quality settings should result in larger file sizes but better image quality.</p>
+        <p>Result: <span class="success">PASS</span> / <span class="failure">FAIL</span></p>
+        <p>Notes: </p>
+    </div>
+    
+    <div class="test-step">
+        <h3>Test Case 4: Image Preview Before and After Conversion</h3>
+        <ol>
+            <li>Upload the test image using either method from Test Case 1 or 2</li>
+            <li>Verify that the original image is displayed in the preview area</li>
+            <li>Click the "Convert" button</li>
+            <li>Verify that both the original and converted images are displayed side by side or in a before/after view</li>
+            <li>Check if there's a comparison feature that allows toggling between the original and converted images</li>
+        </ol>
+        <p>Expected Result: The application should display both the original and converted images, allowing the user to compare them.</p>
+        <p>Result: <span class="success">PASS</span> / <span class="failure">FAIL</span></p>
+        <p>Notes: </p>
+    </div>
+    
+    <div class="test-step">
+        <h3>Test Case 5: Download of the Converted PNG Image</h3>
+        <ol>
+            <li>Upload the test image using either method from Test Case 1 or 2</li>
+            <li>Click the "Convert" button</li>
+            <li>Once the conversion is complete, click the "Download PNG" button</li>
+            <li>Verify that the file is downloaded successfully</li>
+            <li>Open the downloaded file to confirm it's a valid PNG image</li>
+        </ol>
+        <p>Expected Result: The converted PNG image should be downloaded successfully and should be a valid PNG file.</p>
+        <p>Result: <span class="success">PASS</span> / <span class="failure">FAIL</span></p>
+        <p>Notes: </p>
+    </div>
+    
+    <h2>Summary</h2>
+    <p>Please summarize the test results here, including any issues or observations.</p>
+    
+</body>
+</html>
