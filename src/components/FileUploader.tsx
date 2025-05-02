@@ -28,11 +28,11 @@ export const FileUploader: React.FC = () => {
     
     const file = files[0];
     
-    // Check if file is a WebP
-    if (!file.type.includes('webp')) {
+    // Check if file is a WebP, JPEG, or JPG
+    if (!file.type.includes('webp') && !file.type.includes('jpeg') && !file.type.includes('jpg')) {
       setState((prev) => ({
         ...prev,
-        errorMessage: 'Please upload a WebP image file.',
+        errorMessage: 'Please upload a WebP, JPEG, or JPG image file.',
       }));
       return;
     }
@@ -133,7 +133,7 @@ export const FileUploader: React.FC = () => {
               <Upload className="h-10 w-10 text-blue-600" />
             </div>
             <div className="text-center space-y-2">
-              <h3 className="text-lg font-medium text-gray-900">Drag and drop your WebP image here</h3>
+              <h3 className="text-lg font-medium text-gray-900">Drag and drop your WebP, JPEG or JPG image here</h3>
               <p className="text-sm text-gray-500">or</p>
             </div>
             <button 
@@ -145,11 +145,11 @@ export const FileUploader: React.FC = () => {
             <input 
               ref={fileInputRef}
               type="file" 
-              accept="image/webp"
+              accept="image/webp,image/jpeg,image/jpg"
               className="hidden" 
               onChange={handleInputChange}
             />
-            <p className="text-xs text-gray-400">Supports WebP images</p>
+            <p className="text-xs text-gray-400">Supports WebP, JPEG and JPG images</p>
           </div>
         </div>
       ) : (
