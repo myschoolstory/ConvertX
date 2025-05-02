@@ -98,7 +98,7 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-xs text-gray-500">Original Format</p>
-              <p className="text-sm font-medium">WebP</p>
+              <p className="text-sm font-medium" id="originalFormat">Image</p>
             </div>
             <div>
               <p className="text-xs text-gray-500">Converted Format</p>
