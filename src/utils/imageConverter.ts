@@ -1,7 +1,7 @@
 import { ConversionSettings } from '../types';
 
 /**
- * Converts a WebP image to PNG with specified settings
+ * Converts a WebP, JPEG, or JPG image to PNG with specified settings
  */
 export const convertImage = async (
   file: File,
