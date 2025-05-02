@@ -149,7 +149,7 @@ export const FileUploader: React.FC = () => {
               className="hidden" 
               onChange={handleInputChange}
             />
-            <p className="text-xs text-gray-400">Supports WebP images</p>
+            <p className="text-xs text-gray-400">Supports WebP, JPG, and JPEG images</p>
           </div>
         </div>
       ) : (
