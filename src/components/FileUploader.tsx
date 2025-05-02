@@ -28,11 +28,11 @@ export const FileUploader: React.FC = () => {
     
     const file = files[0];
     
-    // Check if file is a WebP
-    if (!file.type.includes('webp')) {
+    // Check if file is a WebP, JPG, or JPEG
+    if (!file.type.includes('webp') && !file.type.includes('jpeg') && !file.type.includes('jpg')) {
       setState((prev) => ({
         ...prev,
-        errorMessage: 'Please upload a WebP image file.',
+        errorMessage: 'Please upload a WebP, JPG, or JPEG image file.',
       }));
       return;
     }
